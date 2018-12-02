@@ -62,7 +62,9 @@
 
 .welcome{
 	height: calc(100vh - 72px);
-	
+	overflow: hidden;
+	min-height: 500px;
+
 }
 
 .ra-slider {
@@ -73,7 +75,12 @@
 .ra-slider__item{
 	display: flex;
 	height: 100%;
-	position: relative;
+	position: absolute;
+	top:0;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	
 	
 }
 .ra-slider__box--left{
@@ -107,6 +114,9 @@ width: 100%;
 .blue-bg{
 	background-color: #8bcfff;
 }
+.pink-bg{
+	background-color: #f27d9b;
+}
 
 .ra-slider__controls{
 		position: absolute;
@@ -123,4 +133,8 @@ width: 100%;
 .ra-slider__btn--red{
 	background-color: brown;
 	margin-left: 1rem;
+}
+.ra-slider__item--active{
+	visibility: visible;
+	opacity: 1;
 }
