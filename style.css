@@ -6,6 +6,8 @@
 	text-decoration: none;
 	list-style-type: none;
 	font-family: 'Roboto Condensed', sans-serif;
+		color: darkslategrey;
+
 }
 .body-wrapper{
 	max-width: 90%;
@@ -21,7 +23,6 @@
 .logo{
 	flex: 0 0 30%;
 	font-weight: bold;
-	color: darkslategrey;
 	font-size: 1.5rem;
 }
 .logo--contrast{
@@ -59,4 +60,67 @@
 	border-radius: 5px;
 }
 
+.welcome{
+	height: calc(100vh - 72px);
+	
+}
 
+.ra-slider {
+	height: 100%;
+	position: relative;
+}
+
+.ra-slider__item{
+	display: flex;
+	height: 100%;
+	position: relative;
+	
+}
+.ra-slider__box--left{
+	flex: 0 0 30%;
+}
+.ra-slider__img{
+	height: 100%;
+}
+
+.ra-slider__img img{
+	height: 100%;
+		object-fit: contain;
+width: 100%;
+}
+.ra-slider__title{
+	position: absolute;
+	top:10%;
+	display: flex;
+	flex-direction: column;
+	
+}
+.ra-slider__sup-title{
+	font-size: 5rem;
+	font-weight: light;
+}
+.ra-slider__title-big{
+	font-size: 10rem;
+	color: black;
+	font-weight: bold;
+}
+.blue-bg{
+	background-color: #8bcfff;
+}
+
+.ra-slider__controls{
+		position: absolute;
+	bottom:30px;
+
+}
+.ra-slider__btn{
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	color: white;
+	background-color: darkslategrey;
+}
+.ra-slider__btn--red{
+	background-color: brown;
+	margin-left: 1rem;
+}
