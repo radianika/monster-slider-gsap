@@ -1,3 +1,6 @@
+/*styles*/
+
+/*global styles*/
 *{
 	margin: 0;
 	padding: 0;
@@ -13,6 +16,8 @@
 	max-width: 90%;
 	margin: auto;
 }
+
+/*header styles*/
 .header{
 	display:flex;
 	justify-content: flex-start;
@@ -20,6 +25,7 @@
 	text-transform: uppercase;
 	align-items: center;
 }
+/*header styles LOGO*/
 .logo{
 	flex: 0 0 30%;
 	font-weight: bold;
@@ -28,6 +34,10 @@
 .logo--contrast{
 	color:brown;
 }
+.logo:hover{
+	filter: invert(100%);
+}
+/* heder styles MENU*/
 .menu{
 	display: flex;
 	flex-direction: row;
@@ -42,9 +52,7 @@
 .menu__item:hover{
 	border:1px solid brown;
 }
-.logo:hover{
-	filter: invert(100%);
-}
+/*header styles BURGER*/
 .burger{
 	margin-left: auto;
 	width: 2rem;
@@ -60,67 +68,36 @@
 	border-radius: 5px;
 }
 
+
+/*WELCOME SECTION styles*/
 .welcome{
 	height: calc(100vh - 72px);
 	overflow: hidden;
 	min-height: 500px;
+	padding-bottom: 5px;
 
 }
-
+/* slider styles*/
 .ra-slider {
 	height: 100%;
 	position: relative;
 }
-
+/*slider main block*/
 .ra-slider__item{
 	display: flex;
 	height: 100%;
 	position: absolute;
 	top:0;
 	left: 0;
-	visibility: hidden;
-	opacity: 0;
-	
-	
-}
-.ra-slider__box--left{
-	flex: 0 0 30%;
-}
-.ra-slider__img{
-	height: 100%;
-}
+opacity: 0;
+visibility: hidden;}
 
-.ra-slider__img img{
-	height: 100%;
-		object-fit: contain;
-width: 100%;
-}
-.ra-slider__title{
-	position: absolute;
-	top:10%;
-	display: flex;
-	flex-direction: column;
-	
-}
-.ra-slider__sup-title{
-	font-size: 5rem;
-	font-weight: light;
-}
-.ra-slider__title-big{
-	font-size: 10rem;
-	color: black;
-	font-weight: bold;
-}
-.blue-bg{
-	background-color: #8bcfff;
-}
-.pink-bg{
-	background-color: #f27d9b;
-}
 
+/*slider controls*/
 .ra-slider__controls{
 		position: absolute;
 	bottom:30px;
+	z-index: 3;
 
 }
 .ra-slider__btn{
@@ -134,7 +111,51 @@ width: 100%;
 	background-color: brown;
 	margin-left: 1rem;
 }
-.ra-slider__item--active{
-	visibility: visible;
-	opacity: 1;
+	
+
+/*slider left part*/
+.ra-slider__box--left{
+	flex: 0 0 30%;
+	z-index: 2;
 }
+.ra-slider__header{
+	position: absolute;
+	top:10%;
+	display: flex;
+	flex-direction: column;	
+}
+.ra-slider__sub{
+	font-size: 5rem;
+	font-weight: light;
+}
+.ra-slider__title{
+	font-size: 10rem;
+	color: black;
+	font-weight: bold;
+}
+/*slider right part*/
+.ra-slider__box--right{
+	height: 100%;
+}
+
+.ra-slider__img{
+	height: 100%;
+		object-fit: contain;
+width: 100%;
+}
+
+.blue-bg{
+	background-color: #8bcfff;
+}
+.pink-bg{
+	background-color: #f27d9b;
+}
+.green-bg{
+	background-color: #7fbc00;
+}
+
+.active{
+opacity: 1;
+	visibility: visible;
+}
+
