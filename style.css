@@ -1,6 +1,21 @@
-/*styles*/
+/*
+## Table of Contents
+##
+## HEADER SECTION ........... header styles
+#### header LOGO
+#### header MENU
+#### header BURGER
+## WELCOME SECTION .......... welcome styles
+### SLIDER BOX  ............. slider styles
+#### slider MAIN BLOCK ...... item styles
+#### slidEr CONTROLS ........ to switch slides
+#### slider INFO PART ....... left side
+#### slider PICTURE PART .... right side
+*/
 
-/*global styles*/
+
+/* GLOBAL STYLES */
+
 *{
 	margin: 0;
 	padding: 0;
@@ -9,7 +24,7 @@
 	text-decoration: none;
 	list-style-type: none;
 	font-family: 'Roboto Condensed', sans-serif;
-		color: darkslategrey;
+	color: darkslategrey;
 
 }
 .body-wrapper{
@@ -17,7 +32,7 @@
 	margin: auto;
 }
 
-/*header styles*/
+/*HEADER SECTION*/
 .header{
 	display:flex;
 	justify-content: flex-start;
@@ -25,7 +40,7 @@
 	text-transform: uppercase;
 	align-items: center;
 }
-/*header styles LOGO*/
+/*header LOGO*/
 .logo{
 	flex: 0 0 30%;
 	font-weight: bold;
@@ -35,9 +50,9 @@
 	color:brown;
 }
 .logo:hover{
-	filter: invert(100%);
+	filter: invert(75%);
 }
-/* heder styles MENU*/
+/* header MENU*/
 .menu{
 	display: flex;
 	flex-direction: row;
@@ -47,12 +62,31 @@
 .menu__item{
 	padding: 5px 10px;
 	border: 1px solid white;
+	transition: all 0.6s;
+	position: relative;
+}
+.menu__item:first-child{
+	margin-left: -10px;
+}
+/*line under menu items*/
+.menu__item::before {
+	content: "";
+  width: 0;
+  height: 0.1em;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: brown;
+  transition: all 0.3s;
+}
+.menu__item:hover::before {
+  width: 100%;
+  left: 0;
+  background: $color2;
 }
 
-.menu__item:hover{
-	border:1px solid brown;
-}
-/*header styles BURGER*/
+
+/*header BURGER*/
 .burger{
 	margin-left: auto;
 	width: 2rem;
@@ -60,16 +94,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	background: inherit;
+	border: none;
 }
 .burger__line{
-	width:100%;
+	width:2rem;
 	height: 0.5rem;
 	background-color: brown;
 	border-radius: 5px;
 }
 
 
-/*WELCOME SECTION styles*/
+/*WELCOME SECTION*/
 .welcome{
 	height: calc(100vh - 72px);
 	overflow: hidden;
@@ -77,28 +113,38 @@
 	padding-bottom: 5px;
 
 }
-/* slider styles*/
+
+
+/* SLIDER BOX*/
 .ra-slider {
 	height: 100%;
 	position: relative;
 }
-/*slider main block*/
+
+
+/*slider MAIN BLOCK*/
 .ra-slider__item{
 	display: flex;
 	height: 100%;
 	position: absolute;
 	top:0;
 	left: 0;
-opacity: 0;
-visibility: hidden;}
+	opacity: 0;
+	visibility: hidden;
+}
+
+/*styles for current slide*/
+.active{
+	opacity: 1;
+	visibility: visible;
+}
 
 
-/*slider controls*/
+/*slider CONTROLS*/
 .ra-slider__controls{
-		position: absolute;
+	position: absolute;
 	bottom:30px;
 	z-index: 3;
-
 }
 .ra-slider__btn{
 	width: 4rem;
@@ -113,7 +159,7 @@ visibility: hidden;}
 }
 	
 
-/*slider left part*/
+/*slider INFO PART*/
 .ra-slider__box--left{
 	flex: 0 0 30%;
 	z-index: 2;
@@ -133,17 +179,19 @@ visibility: hidden;}
 	color: black;
 	font-weight: bold;
 }
-/*slider right part*/
+
+
+/*slider PICTURE PART*/
 .ra-slider__box--right{
 	height: 100%;
 }
-
 .ra-slider__img{
 	height: 100%;
-		object-fit: contain;
-width: 100%;
+	object-fit: contain;
+	width: 100%;
 }
 
+/*imgs bg*/
 .blue-bg{
 	background-color: #8bcfff;
 }
@@ -153,9 +201,3 @@ width: 100%;
 .green-bg{
 	background-color: #7fbc00;
 }
-
-.active{
-opacity: 1;
-	visibility: visible;
-}
-
